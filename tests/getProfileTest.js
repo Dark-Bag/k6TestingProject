@@ -18,5 +18,7 @@ export default function getProfileTest() {
     const body = loginResponse.json();
     const token = body.data.token;
 
-    const profileResponse = getProfileRequest(token); 
+    const profileResponse = getProfileRequest(token);
+    
+    
 } 

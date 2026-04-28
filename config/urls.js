@@ -1,4 +1,7 @@
-export const URL ={
-    login: "https://ndosiautomation.co.za/APIDEV/login",
-    profile: "https://ndosiautomation.co.za/APIDEV/profile"
+
+export const ENDPOINTS ={
+
+    LOGIN: "https://ndosiautomation.co.za/APIDEV/login",
+    PROFILE: "https://ndosiautomation.co.za/APIDEV/profile",
+    TESTIMONIAL: "https://ndosiautomation.co.za/APIDEV/testimonials"
 }

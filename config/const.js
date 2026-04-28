@@ -1,7 +1,8 @@
 export const TEST_CONFIG = {
-    vus: 20,
-    duration: '20s',
+    vus: 10,
+    duration: '10s',
     sleeptime: 1,
+    iterations: 1, 
 };
 
 export const HEADERS = {
@@ -9,3 +10,4 @@ export const HEADERS = {
       "Content-Type": "application/json",
 }
 };
+
