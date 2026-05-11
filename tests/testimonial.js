@@ -9,6 +9,8 @@ import { deleteTestimonialRequest } from "../requests/deleteTestimonialRequest.j
 import { validateLoginResponse } from "../checks/authChecks.js";
 import { validateTestimonialResponse, validateTestimonialUpdateResponse,  validateTestimonialDeleteResponse } from "../checks/testimonialCheck.js";
 import { getProfileRequest } from "../requests/getProfileRequest.js";
+import { htmlReport } from "https://raw.githubusercontent.com/benc-uk/k6-reporter/main/dist/bundle.js";
+
 
 export  const options = {
     vus: TEST_CONFIG.vus,
@@ -35,4 +37,9 @@ export default function testimonialTest() {
 
     sleep(TEST_CONFIG.sleeptime);
 
-} 
+}
+
+export function handleSummary(data) {
+  return {
+    "reports/report.html": htmlReport(data),
+  }};

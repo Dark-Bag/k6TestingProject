@@ -18,5 +18,29 @@ export const PAYLOAD ={
   approvalStatus: {
     "isActive": true
   }
-    
 }
+
+export function registrationPayload(email) {
+
+    return {
+        firstName: "QA",
+        lastName: "InABag",
+        email: email,
+        password: "SecurePass#123",
+        confirmPassword: "SecurePass#123",
+        groupId: "1deae17a-c67a-4bb0-bdeb-df0fc9e2e526"
+    };
+
+}
+
+export function newUserLoginPayload(email) {
+
+    return {
+        
+        email: email,
+        password: "SecurePass#123",
+     
+    };
+
+}
+
