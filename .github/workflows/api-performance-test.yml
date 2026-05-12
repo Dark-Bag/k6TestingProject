@@ -15,3 +15,10 @@ jobs:
       - uses: actions/checkout@v3
       - name: Run performance tests
         run: npm run performance-test
+      - name: Upload performance test results
+        uses: actions/upload-artifact@v3
+        with:
+          name: performance-test-results
+          path: performance-test-results.json
+      
+      
