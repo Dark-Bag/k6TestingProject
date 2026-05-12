@@ -20,12 +20,14 @@ import { deleteTestimonialRequest } from "../requests/deleteTestimonialRequest.j
 import { validateTestimonialResponse, validateTestimonialUpdateResponse,  
     validateTestimonialDeleteResponse } from "../checks/testimonialCheck.js";
 import { deleteNewUserRequest } from '../requests/deleteNewUserRequest.js';
+import { htmlReport } from "https://raw.githubusercontent.com/benc-uk/k6-reporter/main/dist/bundle.js";
+
 
 export  const options = {
     vus: TEST_CONFIG.vus,
     duration: TEST_CONFIG.duration,
 }
-export default function registrationTest() {
+export default function e2eTestingWorkflow() {
 
     const groupIDResponse = getGroupIDRequest();
     const groupBody = groupIDResponse.json();
@@ -74,3 +76,8 @@ export default function registrationTest() {
     sleep(TEST_CONFIG.sleeptime);
 
 }
+
+export function handleSummary(data) {
+  return {
+    "reports/report.html": htmlReport(data),
+  }};
